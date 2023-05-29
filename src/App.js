@@ -1,22 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import CardUpdate from "./components/CardUpdate";
+import CardSuccess from "./components/CardSuccess";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header bg-charcoal-grey">
+      <Routes>
+        <Route path="/" index element={<CardUpdate />} />
+        <Route path="/success" element={<CardSuccess />} />
+      </Routes>
       </header>
     </div>
   );
